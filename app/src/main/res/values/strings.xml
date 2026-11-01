@@ -29,6 +29,7 @@
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="btn_save">Save</string>
     <string name="saved">Saved</string>
 
     <string name="label_title">Title</string>
