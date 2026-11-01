@@ -29,9 +29,14 @@ jobs:
       - name: Build debug APK
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          set +e
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log
+          code=${PIPESTATUS[0]}
+          grep -E "e: |w: |error:|FAILURE:|What went wrong|Caused by|AAPT: error" build.log | sed -E 's/^[[:space:]]*//; s/^/::error::/' || true
+          exit $code
 
       - name: Upload APK
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: app-debug

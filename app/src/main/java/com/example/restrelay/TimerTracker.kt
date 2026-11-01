@@ -65,7 +65,7 @@ class TimerTracker {
      * Consumes the tracker state for [pkg].
      */
     fun decideRemoval(pkg: String, thresholdSec: Int, unsureAlert: Boolean): Pair<String, Boolean> {
-        val t = timers[pkg] ?: return ("no timer state", unsureAlert)
+        val t = timers[pkg] ?: return Pair("no timer state", unsureAlert)
         val now = SystemClock.elapsedRealtime()
 
         val result: Pair<String, Boolean> = when {
