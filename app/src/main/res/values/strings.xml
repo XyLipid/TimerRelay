@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Rest Relay</string>
+    <string name="settings_title">Settings</string>
+    <string name="rules_title">Rules</string>
+    <string name="appearance_title">Alert appearance</string>
+    <string name="delivery_title">Delivery settings</string>
+    <string name="rest_title">Rest timer settings</string>
+    <string name="log_title">Debug Log</string>
+    <string name="service_label">Rest Relay listener</string>
+
+    <string name="status_granted">Notification access: GRANTED</string>
+    <string name="status_denied">Notification access: NOT granted</string>
+    <string name="btn_enable_access">Enable notification access</string>
+    <string name="btn_rules">Rules</string>
+    <string name="btn_appearance">Alert appearance</string>
+    <string name="btn_delivery">Delivery settings</string>
+    <string name="btn_rest">Rest timer settings</string>
+    <string name="btn_log">Debug log</string>
+    <string name="label_ignore_eta">Ignore ETA, alert only on arrival</string>
+    <string name="hint_main">1. Enable notification access\n2. Add a rule for each gym / delivery app\n3. Tune the alert appearance and detection settings\n4. Use the Debug log to write rules from real data</string>
+
+    <string name="btn_add_rule">Add rule</string>
+    <string name="type_rest">Rest timer</string>
+    <string name="type_delivery">Delivery</string>
+    <string name="hint_keywords">Keyword for text mode (e.g. 0:00, Rest over)</string>
+    <string name="rule_add_title">Add rule</string>
+    <string name="rule_edit_title">Edit rule</string>
+    <string name="rule_delete_title">Delete rule?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+
+    <string name="label_title">Title</string>
+    <string name="label_body">Body (use {app}, {eta}, {exercise})</string>
+    <string name="label_vibration">Vibration</string>
+    <string name="hint_custom_vibration">Custom on/off ms, e.g. 0,150,100,150</string>
+    <string name="btn_test_vibration">Test vibration</string>
+    <string name="label_sound">Sound</string>
+    <string name="btn_pick_sound">Pick sound</string>
+    <string name="sound_none">None</string>
+    <string name="sound_default">System default</string>
+    <string name="sound_custom">Custom sound</string>
+    <string name="sound_pick_title">Notification sound</string>
+    <string name="label_color">Accent colour</string>
+    <string name="label_icon">Icon</string>
+    <string name="label_timeout">Auto-dismiss</string>
+    <string name="label_bigtext">Show full text expanded</string>
+    <string name="btn_test_alert">Send test alert</string>
+    <string name="btn_reset">Reset to defaults</string>
+    <string name="hint_heads_up">Importance is always HIGH so alerts can show as a heads-up pop-up. Final pop-up behaviour also depends on the system notification settings for this app.</string>
+
+    <string name="label_alert_before">Alert N minutes before arrival (1–30)</string>
+    <string name="label_consecutive">Consecutive updates required (1–3)</string>
+    <string name="label_rearm">Re-arm margin in minutes</string>
+    <string name="label_delay_enabled">Enable \'Delivery delayed\' alert</string>
+    <string name="label_delay_threshold">Delay threshold in minutes</string>
+    <string name="label_cooldown">Per-order cooldown in minutes</string>
+    <string name="label_arrival_keywords">Arrival keywords (comma separated)</string>
+    <string name="hint_arrival_keywords">arrived, at your door, outside</string>
+    <string name="label_eta_relative">ETA regex (relative)</string>
+    <string name="label_eta_absolute">ETA regex (absolute)</string>
+
+    <string name="label_skip_threshold">Skip threshold in seconds</string>
+    <string name="label_unsure_alert">When unsure: alert (instead of stay silent)</string>
+    <string name="label_stale">Stale seconds (stale mode)</string>
+
+    <string name="btn_refresh">Refresh</string>
+    <string name="btn_clear">Clear</string>
+</resources>

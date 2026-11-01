@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:allowBackup="true"
+        android:theme="@style/Theme.RestRelay">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RulesActivity"
+            android:label="@string/rules_title" />
+
+        <activity
+            android:name=".AppearanceActivity"
+            android:label="@string/appearance_title" />
+
+        <activity
+            android:name=".DeliverySettingsActivity"
+            android:label="@string/delivery_title" />
+
+        <activity
+            android:name=".RestSettingsActivity"
+            android:label="@string/rest_title" />
+
+        <activity
+            android:name=".LogActivity"
+            android:label="@string/log_title" />
+
+        <service
+            android:name=".RestListenerService"
+            android:label="@string/service_label"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>
