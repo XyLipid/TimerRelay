@@ -1,5 +1,8 @@
 package com.example.restrelay
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -55,5 +58,31 @@ class DeliverySettingsActivity : AppCompatActivity() {
             Prefs.setEtaAbsoluteRegex(this, editAbs.text.toString())
             Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show()
         }
+
+        val editTest = findViewById<EditText>(R.id.edit_test_delivery)
+        editTest.setText(getString(R.string.hint_test_delivery))
+        findViewById<Button>(R.id.btn_test_delivery).setOnClickListener {
+            postTestDelivery(editTest.text.toString())
+        }
+    }
+
+    /**
+     * Posts a silent notification from Rest Relay itself so you can test the
+     * delivery pipeline without ordering anything. Point a Delivery rule at the
+     * "Rest Relay" app and this text flows through the same ETA parser + alerts.
+     */
+    private fun postTestDelivery(text: String) {
+        val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        val channelId = "test_delivery"
+        nm.createNotificationChannel(
+            NotificationChannel(channelId, getString(R.string.test_delivery_channel), NotificationManager.IMPORTANCE_LOW)
+        )
+        val n = Notification.Builder(this, channelId)
+            .setSmallIcon(R.drawable.ic_truck)
+            .setContentTitle(getString(R.string.test_delivery_title))
+            .setContentText(text)
+            .setAutoCancel(true)
+            .build()
+        nm.notify(9999, n)
     }
 }

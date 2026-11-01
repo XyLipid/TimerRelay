@@ -137,5 +137,27 @@
             android:layout_marginTop="16dp"
             android:text="@string/btn_save" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_test_delivery"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_test_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_test_delivery"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/btn_test_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_test_delivery" />
+
     </LinearLayout>
 </ScrollView>

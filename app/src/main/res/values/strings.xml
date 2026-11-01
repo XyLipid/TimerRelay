@@ -62,6 +62,12 @@
     <string name="label_eta_relative">ETA regex (relative)</string>
     <string name="label_eta_absolute">ETA regex (absolute)</string>
 
+    <string name="label_test_delivery">Simulate a delivery notification</string>
+    <string name="hint_test_delivery">Arriving in 6 min</string>
+    <string name="btn_test_delivery">Post test delivery notification</string>
+    <string name="test_delivery_channel">Test delivery</string>
+    <string name="test_delivery_title">Test delivery</string>
+
     <string name="label_skip_threshold">Skip threshold in seconds</string>
     <string name="label_unsure_alert">When unsure: alert (instead of stay silent)</string>
     <string name="label_stale">Stale seconds (stale mode)</string>
